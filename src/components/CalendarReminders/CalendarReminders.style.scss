@@ -1,0 +1,13 @@
+.calendar-reminder {
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  border: solid 1px $bg-color-light-blue;
+  border-radius: 4px;
+  margin-bottom: 4px;
+  font-size: $font-size-small;
+  background-color: #FFF;
+  padding: 2px 4px;
+  cursor: pointer;
+}

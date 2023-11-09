@@ -1,0 +1,119 @@
+.form-reminder {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFF;
+  border-radius: 6px;
+  padding: 22px;
+  width: 400px;
+
+  @media (min-width: 768px) {
+    width: 600px;
+  }
+
+  > h2 {
+    color: #555;
+  }
+
+  > .forecast {
+    display: flex;
+    flex-direction: column;
+    border-radius: 4px;
+    border: solid 1px #f0f0f0;
+    padding: 8px 6px;
+
+    > p.text {
+      color: #888;
+      padding: 4px 2px;
+      font-size: $font-size-small;
+    }
+
+    > .current-day {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      > .temperature {
+        > p {
+          color: #333;
+          font-size: $font-size-extra-large;
+
+          > label {
+            color: #999;
+            font-size: $font-size-small;
+          }
+        }
+      }
+
+      > div {
+
+        > div {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          > img {
+            width: 50px;
+          }
+        }
+
+      }
+    }
+  }
+
+  > div {
+    display: flex;
+
+    > .input-form {
+      margin: 10px 0;
+
+      &.input-city {
+        position: relative;
+        width: 100%;
+        margin-right: 6px;
+
+        @media (min-width: 768px) {
+          width: 80%;
+        }
+      }
+    }
+
+    > .suggestions {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      max-height: 180px;
+      box-Shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      padding: 12px 16px;
+      margin-top: 65px;
+      z-index: 99;
+      overflow: auto;
+
+      > .item {
+        cursor: pointer;
+        padding: 4px 0;
+        border-bottom: solid 1px #f0f0f0;
+      }
+
+      &.show {
+        display: block;
+      }
+    }
+  }
+
+  > p.char-count{
+    font-size: 11px;
+    color: #999;
+    margin-top: 6px;
+  }
+
+  > .actions {
+    display: flex;
+    justify-content: flex-end;
+
+    > button {
+      margin-left: 12px;
+    }
+  }
+}
